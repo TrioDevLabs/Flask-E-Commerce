@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+}
+
+h1{
+    font-family: "Roborto", sans-serif;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    margin-right: 20px;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.side-nav{
+    background-color: #8b4513;
+    margin: 0;
+    height: 100vh;
+    width: 200px;
+    font-family: "Roborto", sans-serif;
+    font-size: 20px;
+}
+
+.side-nav>a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.side-nav>a:hover{
+    text-decoration: underline;
+}
+
+.label{
+    font-family: "Roborto", sans-serif;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.update-form{
+    display: flex;
+    margin-left: 80px;
+    margin-top: -4rem;
+}
+
+.update-form>.inputs>a{
+    text-decoration: none;
+    color: brown;
+    font-size: 20px;
+    font-family: "Roberto", sans-serif;
+}
+
+.labels{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 300px; 
+}
+
+.input{
+    width: 200px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    height: 35px;
+    width: 400px;
+    border-radius: 30px;
+    background-color: #D0D0D0;
+}
+
+.submit{
+    margin: auto;
+    background-color: #8b4513;
+    color: white;
+    width: 410px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.submit:hover{
+    transform: scale(1.05);
+    transition-duration: 0.5s;
+}
+
+.submit:not(:hover){
+    transition-duration: 0.5s;
+}

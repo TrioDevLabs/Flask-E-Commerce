@@ -1,0 +1,36 @@
+{% extends 'admin_base.html' %} {% block title %} Update Product Information {%
+endblock %} {%block content %}
+<div class="text-center">
+  <div class="container">
+    <form
+      method="POST"
+      class="form-register"
+      enctype="multipart/form-data"
+      style="color: white"
+    >
+      {{ form.hidden_tag() }}{{ form.csrf_token }}
+      <h1 class="h3 mt-5 mb-3 font-weight-600" style="color: black">
+        Please Update {{product_name}} Info
+      </h1>
+
+      {{ form.price.label( style='font-weight: 500; color: black') }} {{
+      form.price(class="form-control", placeholder="Price",
+      style="background-color: #D0D0D0; border-radius: 20px") }} {{
+      form.quantity.label( style='font-weight: 500; color: black') }} {{
+      form.quantity(class="form-control", placeholder="Enter quantity enter zero
+      to remove product", style="background-color: #D0D0D0; border-radius:
+      20px") }} {{ form.sales_rate.label( style='font-weight: 500; color:
+      black') }} {{ form.sales_rate(class="form-control", placeholder="Sales
+      Rate", style="background-color: #D0D0D0; border-radius: 20px") }} {{
+      form.description.label( style='font-weight: 500; color: black') }} {{
+      form.description(class="form-control", placeholder="Description",
+      style="background-color: #D0D0D0; border-radius: 20px") }}
+
+      <br />
+
+      {{ form.submit(class="btn btn-lg btn-block", style="background-color:
+      #8B4513; color: white") }}
+    </form>
+  </div>
+  <div>{% endblock %}</div>
+</div>

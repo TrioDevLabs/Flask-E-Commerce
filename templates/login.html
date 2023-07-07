@@ -1,0 +1,73 @@
+
+  <body class="text-center" style="background-color: white">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      />
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="/static/css/login.css">
+      <title>{% block title %} {% endblock %}</title>
+    </head>
+    <body style="background-color: white">
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %} {% for category, message in messages %}
+      <div class="alert alert-{{ category }}" , style="color: black">
+        <button
+          type="button"
+          class="m1-2 mb-1 close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        {{ message }}
+      </div>
+      {% endfor %} {% endif %} {% endwith %}
+  <body>
+    <div class="container">
+      <form method="POST" class="login-form" style="color: black">
+        {{ form.hidden_tag() }}
+        <div class="above-row">
+          <p style="font-size: 20px">Welcome "<span>E Comm Web</span>"</p>
+          <p style="color: grey">No Account ?<br /><span><a href="{{url_for('register')}}">Sign Up</a></span></p>
+        </div>
+        <h1 class="h3 mt-5 mb-3 font-weight-600">Sign In</h1>
+        <br />
+        {{ form.username.label(class="label") }} {{ form.username(class="input"
+        ) }} {{ form.password.label(class="label") }} {{
+        form.password(class="input") }}
+  
+        <br />
+        <br />
+          <span style="margin-left: 300px; margin-right: 20px">Forgot Password</span>
+        {{ form.submit(class="submit") }}
+        <!-- <p id="or">or</p>
+        <div class="images">
+          <img src="/static/images/fblogo.png" alt="facebook-logo" width="30px">
+        </div> -->
+      </form>
+    </div>
+  </body>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+      <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"
+      ></script>
+    </body>
+  </html>

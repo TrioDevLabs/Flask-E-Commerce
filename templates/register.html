@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {% block title %} Register Page {% endblock %} {%block
+content %}
+<link rel="stylesheet" href="../static/css/register.css" />
+
+<body class="text-center" style="background-color: white">
+  <div class="container">
+    <form method="POST" class="form-register" style="color: black">
+      {{ form.hidden_tag() }} {{ form.csrf_token }}
+      <h1>Create Account</h1>
+      <br />
+      <div class="fields">
+        <div>
+          {{ form.username.label(class="label") }} {{
+            form.username(class="small-input") }}
+        </div>
+        <div>
+          {{
+            form.email_address.label(class="label") }} {{
+            form.email_address(class="small-input") }}
+        </div>
+      </div>
+      <div class="fields">
+        <div>
+          {{
+            form.password1.label(class="label") }} {{
+            form.password1(class="small-input") }}
+        </div>
+        <div>
+          {{
+            form.password2.label(class="label") }} {{
+            form.password2(class="small-input") }}
+        </div>
+      </div>
+        
+      {{form.address.label( class="label") }}
+      {{form.address(class="long-input") }}
+      {{form.postal_code.label( class="label") }}
+      {{form.postal_code(class="long-input") }}
+      <br />
+
+      <p>Already Have an Account ?</p><br/><a href="{{url_for('login')}}">Sign In</a><br/>
+
+      {{ form.submit(class="button", style="background-color:
+      #8B4513; color: white") }}
+    </form>
+  </div>
+</body>
+{% endblock %}

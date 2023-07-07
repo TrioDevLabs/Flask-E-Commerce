@@ -1,0 +1,92 @@
+.login-form{
+    width: 450px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 100px;
+    border: 1px solid grey;
+}
+
+.above-row{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.above-row > p{
+    font-family: "Roborto", sans-serif;
+}
+
+span{
+    color: #CD853F;
+    font-family: "Roborto", sans-serif;
+}
+
+form>p{
+    margin-top: 20px;
+    color: grey;
+    margin-bottom: -20px;
+    font-family: "Roborto", sans-serif;
+    text-align: center;
+}
+
+a{
+    color: #CD853F;
+    font-family: "Roborto", sans-serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+h1{
+    font-family: "Roborto", sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+.label{
+    font-family: "Roborto", sans-serif;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.input{
+    height: 40px;
+    width: 410px;
+    /* margin-bottom: 20px; */
+    margin-right: 20px;
+    margin-left: 20px;
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+.input:focus{
+    border: 2px solid blue;
+}
+
+.submit{
+    margin: auto;
+    background-color: #8b4513;
+    color: white;
+    width: 410px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.submit:hover{
+    transform: scale(1.05);
+    transition-duration: 0.5s;
+}
+
+.submit:not(:hover){
+    transition-duration: 0.5s;
+}

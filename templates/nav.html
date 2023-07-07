@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="/static/css/navstyle.css">
+<nav>
+  <a class="brand">E Store App</a>
+  <ul>
+    <li>
+      <a href="{{url_for('product', username=username, profile=profile,total=total,gst=gst)}}">
+        Market </a>
+    </li>
+    <li>
+      <a href="{{url_for('cart', username=username, profile=profile,total=total,gst=gst)}}">
+        View Cart </a>
+    </li>
+    <li>
+      <a href="{{url_for('feedback', username=username, profile=profile)}}"> Feedback </a>
+    </li>
+    <li>
+      <a href="{{url_for('viewhistory', username=username, profile=profile)}}"> Order History
+      </a>
+    </li>
+    <li>
+      <a href="{{url_for('faq', username=username, profile=profile)}}"> Ask Question </a>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <a href="{{url_for('ModifyUser', username=username, profile=profile)}}"> <img
+           src="{{ profile }}" alt="profile"  
+          style="width: 65px; height: 65px;
+          margin-top: -1.1rem;
+  border-radius: 80px" /> </a>
+    </li>
+
+    <!-- class="rounded-circle account-img" -->
+    <ul class="log-out">
+      <li>
+        <a href="{{url_for('home')}}">Log Out</a>
+      </li>
+    </ul>
+</nav>

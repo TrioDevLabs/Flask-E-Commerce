@@ -1,0 +1,87 @@
+.container1 {
+    width: 80%;
+    margin: auto;
+}
+
+.slider {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px;
+    height: 80px;
+    background-color: GhostWhite;
+}
+
+.slider:before,
+.slider:after {
+    content: "";
+    flex: 1 0 auto;
+    display: inline-block;
+}
+
+.slider:after {
+    width: 10px;
+}
+
+.item {
+    display: inline-block;
+    width: 50px;
+    margin: 10px;
+    font-weight: bolder;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(203, 209, 216);
+    border-radius: 12px;
+}
+
+.item:before {
+    font-size: 2em;
+    font-weight: bold;
+    opacity: 0.55;
+}
+
+.overnumber {
+    width: 10px;
+    margin: 10px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.sliderHeading {
+    display: inline-block;
+    width: 50px;
+    margin: 10px;
+    font-weight: bolder;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table>tbody>tr>td>img{
+    margin-top: 10px;
+}
+
+.button{
+    margin-top: 10px;
+    background-color: #8b4513;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 2px;
+}
+
+.button:hover{
+    transform: scale(1.1);
+    transition-duration: 1.25s;
+}
+
+.button:not(:hover){
+    transition-duration: 1.25s;
+}

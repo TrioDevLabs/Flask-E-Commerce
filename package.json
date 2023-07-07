@@ -1,0 +1,23 @@
+{
+  "name": "vigilant-winner",
+  "version": "1.0.0",
+  "description": "14k :)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsAdee/vigilant-winner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itsAdee/vigilant-winner/issues"
+  },
+  "homepage": "https://github.com/itsAdee/vigilant-winner#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}

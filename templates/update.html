@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="static/css/update.css" />
+
+<body>
+  <div class="main-container">
+    <div class="side-nav">
+      <a
+        href="{{url_for('product', products=products, image=image_link, form=cartform, username=username, profile='find_profile_pic(username)',total=total,gst=gst)}}"
+        >Home</a
+      >
+      <a
+        href="{{url_for('cart', cart=cart, image=image_link, form=form, username=username, cform=cform, profile='find_profile_pic(username)',total=total,gst=gst)}}"
+        >Cart</a
+      >
+      <a
+        href="{{url_for('viewhistory', record=record, username=username, profile='find_profile_pic(username)')}}"
+        >Order History</a
+      >
+      <a
+        href="{{url_for('feedback', form=form, username=username, profile='find_profile_pic(username)')}}"
+        >Feedback</a
+      >
+      <a
+        href="{{url_for('faq', form=form, username=username, profile= profile  )}}"
+        >Ask Question</a
+      >
+    </div>
+    <div class="form-container">
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %} {% for category, message in messages %}
+      <div class="alert alert-{{ category }}" , style="color: black">
+        <button
+          type="button"
+          class="m1-2 mb-1 close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        {{ message }}
+      </div>
+      {% endfor %} {% endif %} {% endwith %}
+      <h1>Edit Profile {{username}}</h1>
+
+      <form method="POST" enctype="multipart/form-data" class="update-form">
+        {{ form.hidden_tag() }} {{ form.csrf_token }}
+
+        <div class="labels">
+          {{ form.username.label(class="label") }} {{
+          form.email_address.label(class="label") }}
+          {{form.password.label(class="label") }}
+          {{form.address.label(class="label") }}
+          {{form.postal_code.label(class="label") }}
+        </div>
+        <div class="inputs">
+          <!-- <img
+            class="rounded-circle account-img"
+            src="{{ profile }}"
+            alt="an image of a burger"
+            style="width: 120px; height: 120px"
+          />
+          <br /> -->
+          <div class="checkbox mb-3">
+            <!-- <h6>Do not want to modify picture?</h6> -->
+            
+          </div>
+          <br />
+          {{form.username(class="input") }} {{form.email_address(class="input")
+          }} {{form.password(class="input") }} {{form.address(class="input") }}
+          {{form.postal_code(class="input") }} {{ form.submit(class="submit") }}
+          <a
+              class="btn btn-sm btn-secondary"
+              href="{{ url_for('userpic', username=username, profile= profile  ) }}"
+              >Update your profile pic from here</a
+            >
+        </div>
+        <br />
+      </form>
+    </div>
+  </div>
+</body>

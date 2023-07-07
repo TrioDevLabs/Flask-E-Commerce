@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Roboto&display=swap');
+
+.message-form{
+    background-color: #CD853F;
+    width: 400px;
+    margin: auto;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+h1{
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 450;
+    margin-left: 20px;  
+    text-decoration: underline;
+}
+
+.label{
+    font-family: "Roborto", sans-serif;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.input{
+    background-color: #D0D0D0;
+    border-radius: 2px;
+    width: 360px;
+    margin-left: 20px;
+}
+
+.message-input{
+    background-color: #D0D0D0;
+    border-radius: 2px;
+    width: 360px;
+    height: 200px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.submit{
+    background-color: #8b4513;
+    color: white;
+    width: 350px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.submit:hover{
+    transform: scale(1.05);
+    transition-duration: 0.5s;
+}
+
+.submit:not(:hover){
+    transition-duration: 0.5s;
+}
+
+.main-container{
+    display: flex; 
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.text-container{
+    margin-top: 150px;
+    margin-right: 150px;    
+}
+
+.text-container>span{
+    display: block;
+    font-size: 60px;
+    font-family: 'Handlee', cursive;
+}
+
+.text-container>p{
+    text-align: center;
+    font-size: 25px;
+}

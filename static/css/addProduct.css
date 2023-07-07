@@ -1,0 +1,54 @@
+h1{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+.add-product-form{
+    margin: auto;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: #8b4513;
+    border-radius: 10px;
+}
+
+.label{
+    color: white;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.input{
+    height: 40px;
+    width: 520px;
+    margin: auto;
+    background-color: #F0F0F0;
+    border-radius: 2px;
+}
+
+.submit{
+    background-color: #CD853F;;
+    color: aliceblue;
+    font-size: 25px;
+    font-family: "Roborto", sans-serif;
+    width: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 2px;
+}
+
+.submit:hover{
+    transform: scale(1.1);
+    transition-duration: 0.25s;
+}
+
+.submit:not(:hover){
+    transition-duration: 0.25s; 
+}

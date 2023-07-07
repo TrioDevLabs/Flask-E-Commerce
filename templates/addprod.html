@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/min.css')}}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Muli&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Abhaya+Libre&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap"
+    />
+    <link rel="stylesheet" href="{{url_for('static',filename='css/fa.css')}}" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/BDT.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/css/dataTables.bootstrap4.min.css"
+    />
+    <link rel="stylesheet" href="/static/css/addProduct.css" />
+  </head>
+  <body>
+    {%include 'admin_nav.html'%} {% with messages =
+    get_flashed_messages(with_categories=true) %} {% if messages %} {% for
+    category, message in messages %}
+    <div class="alert alert-{{ category }}" , style="color: black">
+      {{ message }}
+    </div>
+    {% endfor %} {% endif %} {% endwith %}
+
+    <h1>Add Product to Inventory</h1>
+    <form method="POST" class="add-product-form" enctype="multipart/form-data">
+      {{ form.hidden_tag() }} {{ form.csrf_token }} {{
+      form.name.label(class="label") }} {{ form.name(class="input") }} {{
+      form.price.label(class="label") }} {{ form.price(class="input") }} {{
+      form.description.label(class="label") }} {{
+      form.description(class="input") }} {{ form.quantity.label(class="label")
+      }} {{ form.quantity(class="input") }} {{
+      form.sales_rate.label(class="label") }} {{form.sales_rate(class="input")}}
+      {{form.image_file.label(class="label")}}
+      {{form.image_file(placeholder="Upload Image", class="input") }}
+      {{form.submit(class="submit") }}
+    </form>
+  </body>
+</html>

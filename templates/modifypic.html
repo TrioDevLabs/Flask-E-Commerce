@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="static/css/update.css" />
+
+<body>
+  <div class="main-container">
+    <div class="side-nav">
+      <a
+        href="{{url_for('product', products=products, image=image_link, form=cartform, username=username, profile='find_profile_pic(username)',total=total,gst=gst)}}"
+        >Home</a
+      >
+      <a
+        href="{{url_for('cart', cart=cart, image=image_link, form=form, username=username, cform=cform, profile='find_profile_pic(username)',total=total,gst=gst)}}"
+        >Cart</a
+      >
+      <a
+        href="{{url_for('viewhistory', record=record, username=username, profile='find_profile_pic(username)')}}"
+        >Order History</a
+      >
+      <a
+        href="{{url_for('feedback', form=form, username=username, profile='find_profile_pic(username)')}}"
+        >Feedback</a
+      >
+      <a
+        href="{{url_for('faq', form=form, username=username, profile='find_profile_pic(username)')}}"
+        >Ask Question</a
+      >
+    </div>
+    <div class="form-container">
+      <h1 style="text-align: center; margin-left: 300px; margin-top: 100px;">{{username}} Update your Profile Pic</h1>
+      <form method="POST" enctype="multipart/form-data" class="update-form">
+        {{ form.hidden_tag() }} {{ form.csrf_token }}
+        <div class="inputs">
+          <img
+            class="rounded-circle account-img"
+            src="{{ profile }}"
+            alt="user_image"
+            style="width: 180px; height: 180px; margin: auto; margin-top: 70px;"
+          />
+          <br />
+          {{form.image_file(style="font-size: 20px; margin-left: 40px;") }}
+          <br />
+          {{ form.submit(class="submit") }}
+        </div>
+        <br />
+      </form>
+    </div>
+  </div>
+</body>
